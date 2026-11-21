@@ -1,0 +1,308 @@
+[
+  {
+    "code": "01",
+    "title": "Website Hosting & Deployment",
+    "tools": "GitHub · Netlify · GitHub Pages",
+    "lessons": [
+      {
+        "title": "Prepare website files",
+        "explain": "Organize HTML, CSS, JavaScript and assets. Confirm index.html is at the publish root.",
+        "question": "Which file should normally be served as the homepage?",
+        "answer": "index.html",
+        "task": "Inspect the project tree, locate index.html, and confirm CSS and image paths are relative to the published root.",
+        "expected": "A valid homepage file and working asset paths.",
+        "caution": "Do not upload secrets or private client data."
+      },
+      {
+        "title": "Upload a project to GitHub",
+        "explain": "Create a repository, add website files, commit changes and inspect the repository.",
+        "question": "What is a saved change in Git usually called?",
+        "answer": "commit",
+        "task": "Add index.html, styles.css and an assets folder to the mock repository, then create a commit.",
+        "expected": "The repository contains the expected files and a commit.",
+        "caution": "Never commit passwords, API keys or client credentials."
+      },
+      {
+        "title": "Deploy a website",
+        "explain": "Connect a repository to a host, choose a publish directory and inspect deployment results.",
+        "question": "What should you check first if a deployment returns a 404?",
+        "answer": "publish directory",
+        "task": "Choose the sample repository and publish directory, then diagnose a failed deployment.",
+        "expected": "The live URL loads the homepage, styles and images.",
+        "caution": "A wrong publish directory or missing index.html commonly causes a 404."
+      }
+    ]
+  },
+  {
+    "code": "02",
+    "title": "Domains & DNS",
+    "tools": "Domain registrar · Cloudflare · Netlify",
+    "lessons": [
+      {
+        "title": "Understand DNS",
+        "explain": "Learn how domain names resolve to hosting and why DNS changes take time.",
+        "question": "Which record type commonly maps a hostname to an IPv4 address?",
+        "answer": "A",
+        "task": "Inspect a sample DNS zone and match record types to their purposes.",
+        "expected": "You can explain A, CNAME, MX and nameserver roles.",
+        "caution": "Do not change existing production records without client approval."
+      },
+      {
+        "title": "Configure A and CNAME records",
+        "explain": "Create and inspect records for apex and www hostnames.",
+        "question": "Which record type points a hostname to another hostname?",
+        "answer": "CNAME",
+        "task": "Correct the sample www record using the supplied fictional hosting target.",
+        "expected": "The apex and www hostnames point to the intended host.",
+        "caution": "Use the exact values supplied by the hosting provider."
+      },
+      {
+        "title": "SSL and HTTPS",
+        "explain": "Understand certificates, HTTPS and common domain validation issues.",
+        "question": "What protocol should a public business website use?",
+        "answer": "HTTPS",
+        "task": "Review a simulated certificate status and resolve the DNS prerequisite.",
+        "expected": "The site loads over HTTPS without certificate warnings.",
+        "caution": "Certificate issuance depends on correct domain configuration."
+      }
+    ]
+  },
+  {
+    "code": "03",
+    "title": "Business Email Setup",
+    "tools": "Google Workspace · Gmail · DNS",
+    "lessons": [
+      {
+        "title": "Choose an email provider",
+        "explain": "Compare domain email hosting, mailboxes, aliases and account access.",
+        "question": "Does owning a domain automatically create an email inbox?",
+        "answer": "no",
+        "task": "Choose an email hosting plan for a fictional small business and identify what is included.",
+        "expected": "A mailbox is provisioned by an email provider.",
+        "caution": "A domain alone does not create an inbox; paid plans may be required."
+      },
+      {
+        "title": "Configure MX records",
+        "explain": "Understand how mail exchangers route incoming messages.",
+        "question": "Which DNS record routes incoming email?",
+        "answer": "MX",
+        "task": "Enter the sample provider MX records into the simulated DNS editor.",
+        "expected": "The provider's required MX records are entered exactly as documented.",
+        "caution": "Never guess MX hosts or priorities."
+      },
+      {
+        "title": "SPF, DKIM and DMARC",
+        "explain": "Learn sender authentication and how to validate records.",
+        "question": "Which record helps specify authorized sending sources?",
+        "answer": "SPF",
+        "task": "Review a sample authentication panel and identify the missing SPF, DKIM or DMARC item.",
+        "expected": "Authentication records match the email provider's instructions.",
+        "caution": "Avoid duplicate SPF records; test before enforcing strict DMARC."
+      }
+    ]
+  },
+  {
+    "code": "04",
+    "title": "Professional Email Signatures",
+    "tools": "Gmail · Outlook · HTML",
+    "lessons": [
+      {
+        "title": "Plan a signature",
+        "explain": "Choose useful contact details, visual hierarchy and accessible styling.",
+        "question": "What makes an email signature useful?",
+        "answer": "contact",
+        "task": "Select appropriate contact details for a fictional salon signature.",
+        "expected": "The signature is concise, accurate and readable on mobile.",
+        "caution": "Avoid oversized banners and unnecessary personal information."
+      },
+      {
+        "title": "Build an HTML signature",
+        "explain": "Use simple HTML and inline styling for email-client compatibility.",
+        "question": "Which HTML attribute makes an email link open a new message?",
+        "answer": "mailto",
+        "task": "Edit the sample signature fields and preview the result.",
+        "expected": "Links work and the layout remains readable on narrow screens.",
+        "caution": "Email clients may strip advanced CSS; keep markup simple."
+      },
+      {
+        "title": "Install and test a signature",
+        "explain": "Add the signature in Gmail or Outlook and send a test message.",
+        "question": "What should you do after installing a signature?",
+        "answer": "test",
+        "task": "Choose the correct mock settings and inspect a test email preview.",
+        "expected": "The signature appears in new messages and replies as intended.",
+        "caution": "Test on desktop and mobile."
+      }
+    ]
+  },
+  {
+    "code": "05",
+    "title": "Favicon Creation",
+    "tools": "Canva · Favicon.io · HTML",
+    "lessons": [
+      {
+        "title": "Design a favicon",
+        "explain": "Create a simple square icon that remains recognizable at small sizes.",
+        "question": "What kind of design works best at 16–32 pixels?",
+        "answer": "simple",
+        "task": "Choose a clear icon and review it at small preview sizes.",
+        "expected": "The icon remains recognizable when tiny.",
+        "caution": "Avoid tiny text and overly complex illustrations."
+      },
+      {
+        "title": "Generate favicon files",
+        "explain": "Prepare favicon.ico and modern PNG or SVG variants where supported.",
+        "question": "What is the purpose of favicon.ico?",
+        "answer": "browser",
+        "task": "Select the appropriate sample favicon package for a website.",
+        "expected": "The site has suitable icon files and references.",
+        "caution": "Keep file names and paths consistent."
+      },
+      {
+        "title": "Add and verify a favicon",
+        "explain": "Reference favicon files in the HTML head and test browser display.",
+        "question": "Which HTML element references a favicon?",
+        "answer": "link",
+        "task": "Repair the broken favicon path in the sample HTML head.",
+        "expected": "The browser tab displays the intended icon.",
+        "caution": "Check path casing and cache if an old icon remains."
+      }
+    ]
+  },
+  {
+    "code": "06",
+    "title": "SEO Fundamentals",
+    "tools": "Google Search · Trends · Keyword Planner",
+    "lessons": [
+      {
+        "title": "Keyword research",
+        "explain": "Understand search intent and choose realistic relevant phrases.",
+        "question": "What should a primary keyword match?",
+        "answer": "intent",
+        "task": "Choose a primary phrase and supporting terms for a local salon page.",
+        "expected": "Keywords match the page's service, location and search intent.",
+        "caution": "Do not stuff keywords or target unrelated phrases."
+      },
+      {
+        "title": "Titles and descriptions",
+        "explain": "Write unique page titles and useful meta descriptions.",
+        "question": "Which HTML element sets the document title?",
+        "answer": "title",
+        "task": "Correct duplicate or vague metadata in the sample page editor.",
+        "expected": "Each important page has a descriptive, unique title and accurate description.",
+        "caution": "Meta descriptions are suggestions, not guaranteed search snippets."
+      },
+      {
+        "title": "Headings, images and links",
+        "explain": "Use semantic heading hierarchy, meaningful alt text and helpful internal links.",
+        "question": "What should informative image alt text describe?",
+        "answer": "image",
+        "task": "Fix the sample heading order and add meaningful alt text.",
+        "expected": "Content is understandable to visitors and search engines.",
+        "caution": "Decorative images should usually have empty alt text."
+      }
+    ]
+  },
+  {
+    "code": "07",
+    "title": "SEO Audit & AI Review",
+    "tools": "Search Console · Screaming Frog · ChatGPT",
+    "lessons": [
+      {
+        "title": "Read an SEO audit",
+        "explain": "Understand crawl reports, issue severity and page-level evidence.",
+        "question": "What should an SEO finding include?",
+        "answer": "URL",
+        "task": "Prioritize sample missing titles, duplicate descriptions and broken links.",
+        "expected": "Findings are tied to specific URLs and evidence.",
+        "caution": "A tool warning is not automatically a ranking problem."
+      },
+      {
+        "title": "Inspect indexing",
+        "explain": "Use Search Console to inspect URLs, sitemap status and indexing reports.",
+        "question": "Does submitting a URL guarantee indexing?",
+        "answer": "no",
+        "task": "Interpret a fictional URL inspection result and choose the next action.",
+        "expected": "You can distinguish crawling, indexing and serving status.",
+        "caution": "Submitting a URL does not guarantee indexing."
+      },
+      {
+        "title": "Use AI responsibly",
+        "explain": "Give AI structured page data, request suggestions and verify each recommendation.",
+        "question": "Should AI-generated SEO recommendations be checked before publishing?",
+        "answer": "yes",
+        "task": "Review AI suggestions and approve or reject each recommendation.",
+        "expected": "Approved changes are accurate, human-reviewed and tested.",
+        "caution": "Never paste passwords or confidential customer information."
+      }
+    ]
+  },
+  {
+    "code": "08",
+    "title": "Website Speed Optimization",
+    "tools": "PageSpeed Insights · Lighthouse · Squoosh",
+    "lessons": [
+      {
+        "title": "Read a performance report",
+        "explain": "Understand lab and field data and Core Web Vitals.",
+        "question": "What does LCP measure?",
+        "answer": "largest",
+        "task": "Interpret sample LCP, INP and CLS findings and identify the priority.",
+        "expected": "You can explain which metric needs attention and why.",
+        "caution": "A single performance score is not the whole user experience."
+      },
+      {
+        "title": "Optimize images",
+        "explain": "Resize and compress images; use modern formats where supported.",
+        "question": "Name one modern image format useful for web delivery.",
+        "answer": "webp",
+        "task": "Choose a smaller image variant that preserves acceptable visual quality.",
+        "expected": "Images are appropriately sized, compressed and delivered efficiently.",
+        "caution": "Do not sacrifice legibility or serve oversized originals."
+      },
+      {
+        "title": "Improve loading behavior",
+        "explain": "Apply lazy loading to offscreen images and reduce unnecessary resources.",
+        "question": "What loading value is commonly used for offscreen images?",
+        "answer": "lazy",
+        "task": "Correct image loading attributes and identify unnecessary resources.",
+        "expected": "The page loads efficiently without breaking layout or interactions.",
+        "caution": "Do not lazy-load the main above-the-fold hero image by default."
+      }
+    ]
+  },
+  {
+    "code": "09",
+    "title": "Complete Client Launch",
+    "tools": "All course tools",
+    "lessons": [
+      {
+        "title": "Plan the launch",
+        "explain": "Confirm scope, access, approvals, backup and acceptance criteria.",
+        "question": "What is required before changing a live client domain?",
+        "answer": "approval",
+        "task": "Organize a fictional client request into a safe launch sequence.",
+        "expected": "The plan identifies dependencies, owners, evidence and approval points.",
+        "caution": "Never change production settings without client authorization."
+      },
+      {
+        "title": "Execute and verify",
+        "explain": "Complete deployment, domain, email, favicon, SEO and performance checks.",
+        "question": "When is a task really complete?",
+        "answer": "verified",
+        "task": "Work through a simulated launch board and resolve blockers.",
+        "expected": "Each task has a verified result and evidence.",
+        "caution": "Keep a rollback plan and record changes."
+      },
+      {
+        "title": "Deliver professionally",
+        "explain": "Prepare a concise handover, known limitations and maintenance notes.",
+        "question": "What should a client handover contain?",
+        "answer": "links",
+        "task": "Complete the launch report and select the evidence the client needs.",
+        "expected": "The client receives links, completed work, test results and next steps.",
+        "caution": "Do not promise search rankings or guaranteed email deliverability."
+      }
+    ]
+  }
+]
