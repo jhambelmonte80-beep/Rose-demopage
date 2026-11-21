@@ -1,2 +1,0 @@
-# Rose-demopage
-demo page
